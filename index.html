@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigment Database for Artists</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Pigment Database</h1>
+            <p class="subtitle">Search by pigment code (e.g., PR254) or name</p>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search pigments (e.g., PR254, Cadmium Red, PY150)..."
+                autocomplete="off"
+            >
+            <button onclick="searchPigments()" id="searchBtn">Search</button>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filters">
+            <h3>Filters</h3>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label>Color Family:</label>
+                    <select id="colorFamilyFilter">
+                        <option value="all">All</option>
+                        <option value="Red">Red</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Green">Green</option>
+                        <option value="Brown">Brown</option>
+                        <option value="Violet">Violet</option>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Lightfastness:</label>
+                    <select id="lightfastnessFilter">
+                        <option value="all">All</option>
+                        <option value="I">I - Excellent</option>
+                        <option value="II">II - Good</option>
+                        <option value="III">III - Fair</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="applyFilters()" class="filter-btn">Apply Filters</button>
+        </div>
+
+        <!-- Results Area -->
+        <div id="results" class="results-container">
+            <p class="hint">⬆️ Start your search above to see pigments ⬆️</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
